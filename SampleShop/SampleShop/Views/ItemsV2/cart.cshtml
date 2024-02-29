@@ -1,0 +1,53 @@
+﻿@model IEnumerable<SampleShop.Models.ItemV2>
+
+@{
+    ViewData["Title"] = "cart";
+}
+
+<h2>cart</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumAvailable)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumAvailable)
+                </td>
+                <td>
+                    <a asp-action="RemoveFromCartInCart" asp-route-id="@item.Id">RemoveFromCart</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div>
+    @if (ViewBag.signed)
+    {
+        <a asp-action="Purchase"class="btn btn-primary" style="background-color:lawngreen">Pruchase</a>
+    }
+    else
+    {
+        <a asp-controller="Users" asp-action="Login"class="btn btn-primary">Login</a>
+    }
+</div>

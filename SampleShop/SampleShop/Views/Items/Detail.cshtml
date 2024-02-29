@@ -1,0 +1,55 @@
+﻿@model SampleShop.Models.Item
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h2>Detail</h2>
+
+<div>
+    <h4>Item</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumAvailable)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumAvailable)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.picAddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.picAddress)
+        </dd>
+    </dl>
+</div>
+<div>
+    @if (ViewBag.isInCart)
+    {
+        <a asp-action="RemoveFromCart" asp-route-id="@Model.Id" class="btn btn-primary" style="background-color:lawngreen">Remove From Cart</a>
+    }
+    else
+    {
+        <a asp-action="AddToCart" asp-route-id="@Model.Id" class="btn btn-primary">AddToCart</a>
+    }
+    <a asp-action="Index" class="btn btn-danger">Back to List</a>
+</div>

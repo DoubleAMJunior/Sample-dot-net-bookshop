@@ -1,0 +1,19 @@
+@using SampleShop.ServiceAndMiddleware
+
+@inject IUserManager userManager
+
+@if (userManager.isSigned())
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li><h3> @userManager.getUser().UserName</h3></li>
+        <li><a asp-controller="Users" asp-action="Logout">Logout</a></li>
+    </ul>
+
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li><a asp-controller="Users" asp-action="Register">Register</a></li>
+        <li><a asp-controller="Users" asp-action="Login">Login</a></li>
+    </ul>
+}
