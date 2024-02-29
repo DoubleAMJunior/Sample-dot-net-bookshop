@@ -1,0 +1,61 @@
+﻿@model MvcTraining.Models.User
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using System.ComponentModel.DataAnnotations;
+
+<script src="~/lib/jquery/dist/jquery.min.js" ></script>
+<script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+<link href="~/lib/bootstrap/dist/css/bootstrap-grid.min.css">
+
+<div class="col-md-4">
+    <form asp-action="Index" method="post" id="myform">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="email" class="control-label"></label>
+            <input asp-for="email" class="form-control" />
+            <span asp-validation-for="email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="firstName" class="control-label"></label>
+            <input asp-for="firstName" class="form-control" />
+            <span asp-validation-for="firstName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="lastName" class="control-label"></label>
+            <input asp-for="lastName" class="form-control" />
+            <span asp-validation-for="lastName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="BirthDate" class="control-label"></label>
+            <input asp-for="BirthDate" class="form-control" />
+            <span asp-validation-for="BirthDate" class="text-danger"></span>
+        </div><div class="form-group">
+            <label asp-for="address1" class="control-label"></label>
+            <input asp-for="address1" class="form-control" />
+            <span asp-validation-for="address1" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="address2" class="control-label"></label>
+            <input asp-for="address2" class="form-control" /><
+            <span asp-validation-for="address2" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="submit" class="btn btn-default" />
+        </div>
+    </form>
+</div>
+
+@*<script>
+    $(document).ready(function{
+        $("#myform").validate({
+            invalidHandler: function (e, v) {
+                alert();
+                //alert(v.numberOfInvalids);
+            },
+            submitHandler: function (form) {
+                $(form).submit();
+            }
+        });
+    });
+</script>*@

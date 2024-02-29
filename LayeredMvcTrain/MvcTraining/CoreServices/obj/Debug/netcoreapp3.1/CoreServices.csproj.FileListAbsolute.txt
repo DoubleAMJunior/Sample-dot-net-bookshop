@@ -1,0 +1,12 @@
+C:\Users\abbasi\source\repos\LayeredMvcTrain\MvcTraining\CoreServices\bin\Debug\netcoreapp3.1\CoreServices.deps.json
+C:\Users\abbasi\source\repos\LayeredMvcTrain\MvcTraining\CoreServices\bin\Debug\netcoreapp3.1\CoreServices.dll
+C:\Users\abbasi\source\repos\LayeredMvcTrain\MvcTraining\CoreServices\bin\Debug\netcoreapp3.1\CoreServices.pdb
+C:\Users\abbasi\source\repos\LayeredMvcTrain\MvcTraining\CoreServices\obj\Debug\netcoreapp3.1\CoreServices.AssemblyInfoInputs.cache
+C:\Users\abbasi\source\repos\LayeredMvcTrain\MvcTraining\CoreServices\obj\Debug\netcoreapp3.1\CoreServices.AssemblyInfo.cs
+C:\Users\abbasi\source\repos\LayeredMvcTrain\MvcTraining\CoreServices\obj\Debug\netcoreapp3.1\CoreServices.csproj.CoreCompileInputs.cache
+C:\Users\abbasi\source\repos\LayeredMvcTrain\MvcTraining\CoreServices\obj\Debug\netcoreapp3.1\CoreServices.dll
+C:\Users\abbasi\source\repos\LayeredMvcTrain\MvcTraining\CoreServices\obj\Debug\netcoreapp3.1\CoreServices.pdb
+C:\Users\abbasi\source\repos\LayeredMvcTrain\MvcTraining\CoreServices\bin\Debug\netcoreapp3.1\DataManager.dll
+C:\Users\abbasi\source\repos\LayeredMvcTrain\MvcTraining\CoreServices\bin\Debug\netcoreapp3.1\DataManager.pdb
+C:\Users\abbasi\source\repos\LayeredMvcTrain\MvcTraining\CoreServices\obj\Debug\netcoreapp3.1\CoreServices.csproj.AssemblyReference.cache
+C:\Users\abbasi\source\repos\LayeredMvcTrain\MvcTraining\CoreServices\obj\Debug\netcoreapp3.1\CoreServices.csproj.CopyComplete

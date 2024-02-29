@@ -1,0 +1,69 @@
+﻿@model List<MvcTraining.Models.User>
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h2>Input List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model[0].email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].firstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].lastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].BirthDate)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <form  method="post">
+            @*@foreach (MvcTraining.Models.User u in Model)
+            {
+                <tr>
+                    <td>
+                       <input  type="text" asp-for="@u.email" value="@u.email"  />
+                    </td>
+                    <td>
+                        <input type="text" value="@u.firstName" name="firstName" />
+                    </td>
+                    <td>
+                        <input type="text" value="@u.lastName"  name="lastName"/>
+                    </td>
+                    <td>
+                        <input type="text" value="@u.BirthDate" name="BirthDate " />
+                    </td>
+                </tr>
+            }
+            <tr>
+                <input value="submit" type="submit">
+             </tr>*@
+            @for (int i = 0; i < Model.Count; i++)
+            {
+            <tr>
+                <td>
+                    <input type="text" asp-for="@Model[i].email" value="@Model[i].email" />
+                </td>
+                <td>
+                    <input type="text" asp-for="@Model[i].firstName" value="@Model[i].firstName" />
+                </td>
+                <td>
+                    <input type="text" asp-for="@Model[i].lastName" value="@Model[i].lastName" />
+                </td>
+                <td>
+                    <input type="text" asp-for="@Model[i].BirthDate" value="@Model[i].BirthDate" />
+                </td>
+            </tr>
+            }
+            <tr>
+                <input asp-action="SpreadSheat" value="submit" type="submit">
+                <input asp-action="addRow" type="submit" value="add row" />
+            </tr>
+            </form>
+        </tbody>
+</table>

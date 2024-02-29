@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "eNjvd9t35niC6bH9vwVuofHcHR/Z5xe2gYtOLxKhU4guwqylWaahkBdh0F/ev4pSw9REe0Ui5itsLXQzwbIm1w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\abbasi\\source\\repos\\LayeredMvcTrain\\MvcTraining\\CoreServices\\Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\abbasi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

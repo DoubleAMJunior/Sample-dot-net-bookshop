@@ -1,0 +1,62 @@
+﻿@model ApplicationServices.Models.GenericSearchModel<ApplicationServices.Models.UserSearchModel, ApplicationServices.Models.UserResultModel>
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using System.ComponentModel.DataAnnotations;
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+<h2>Search Form</h2>
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(Model => Model.searchModel.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(Model => Model.searchModel.startBD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(Model => Model.searchModel.endBD)
+        </th>
+    </tr>
+    <tr>
+        <form asp-action="Search" method="post" id="myform">
+        <td>
+            <div class="form-group">
+                <input type="text" asp-for="@Model.searchModel.name" value="@Model.searchModel.name" class="form-control">
+                <span asp-validation-for="searchModel.name" class="text-danger"></span>
+            </div>
+        </td>
+        <td>
+            <div class="form-group">
+                <input type="text" asp-for="@Model.searchModel.startBD" value="@Model.searchModel.startBD" class="form-control"/>
+                <span asp-validation-for="searchModel.startBD" class="text-danger"></span>
+            </div>
+        </td>
+        <td>
+            <div class="form-group">
+                <input type="text" asp-for="@Model.searchModel.endBD" value="@Model.searchModel.endBD" class="form-control"/>
+                <span asp-validation-for="searchModel.startBD" class="text-danger"></span>
+            </div>
+        </td>
+        <td>
+            <input type="submit" value="search" />
+        </td>
+        </form>
+    </tr>
+</table>
+<h1>results</h1>
+<table>
+    @foreach(ApplicationServices.Models.UserResultModel res in Model.resultModel)
+            {
+                <tr>
+                    <td>@res.firstName</td>
+                    <td>@res.lastName</td> 
+                    <td>@res.birthdate</td>
+                    
+                </tr>
+            }
+</table>
